@@ -2,4 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  .landing{
+  height: 100vh;
+ background: linear-gradient(to top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 87%);
+  }
 }
