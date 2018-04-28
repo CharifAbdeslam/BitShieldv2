@@ -1,7 +1,7 @@
 import React from 'react';
+import logo from '../img/logo.png';
 import {
   Navbar,
-  NavbarBrand,
   UncontrolledDropdown,
   Nav,
   NavItem,
@@ -14,13 +14,13 @@ Col} from 'reactstrap';
  const Menu =()=>{
   return(
     <Navbar expand="md">
-    <NavbarBrand href="/">reactstrap</NavbarBrand>
-      <Nav className="ml-auto" navbar>
+    <img src={logo} width="170"/>
+      <Nav className="mr-auto ml-5" navbar>
         <NavItem>
-          <NavLink href="/components/">Components</NavLink>
+          <NavLink href="#">Components</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+          <NavLink href="#">GitHub</NavLink>
         </NavItem>
         <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav caret>
