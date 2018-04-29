@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../img/logo.png';
+
 import {
   Navbar,
   UncontrolledDropdown,
@@ -8,37 +9,42 @@ import {
   NavLink,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-Row,
-Col} from 'reactstrap';
+  DropdownItem} from 'reactstrap';
  const Menu =()=>{
   return(
-    <Navbar expand="md">
-    <img src={logo} width="170"/>
+    <Navbar expand="md" className="ml-5">
+    <img  className="logo-menu" src={logo} width="170" alt="BitShield"/>
       <Nav className="mr-auto ml-5" navbar>
         <NavItem>
-          <NavLink href="#">Components</NavLink>
+          <NavLink href="#">EXCHANGE</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#">GitHub</NavLink>
+          <NavLink href="#">SUPPORT</NavLink>
         </NavItem>
         <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav caret>
-            Options
+            MORE
           </DropdownToggle>
           <DropdownMenu right>
             <DropdownItem>
-              Option 1
+              HOW IT WORKS
             </DropdownItem>
             <DropdownItem>
-              Option 2
+              CONTACT US
             </DropdownItem>
-            <DropdownItem divider />
             <DropdownItem>
-              Reset
+              PRIVACY
             </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
+      </Nav>
+      <Nav className="mr-5 nav-login" navbar>
+        <NavItem className="login-nav pr-3">
+          <NavLink href="#">LOGIN</NavLink>
+        </NavItem>
+        <NavItem className="pl-3">
+          <NavLink href="#">SIGN UP</NavLink>
+        </NavItem>
       </Nav>
   </Navbar>
   )

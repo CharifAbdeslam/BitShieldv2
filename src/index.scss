@@ -4,7 +4,34 @@ body {
   padding: 0;
   font-family: 'Mina', sans-serif;
   .landing{
-  height: 100vh;
+  height: 80vh;
  background-image: linear-gradient(9deg, #000F18 34%, #0D3044 100%)
+  }
+  .logo-menu{
+    margin-bottom: 9px;
+  }
+  .navbar-nav{
+    a{
+      color:#D2D3D3;
+      font-size: 14px;
+      &:hover{
+        color:white;
+      }
+    }
+    button{
+      font-size: 14px;
+      line-height: 1;
+      &:active{
+      background-color: #212121;
+      }
+    }
+    .login-nav{
+      border-right: 1px solid #D2D3D3;
+    }
+  }
+  .nav-login{
+    a{
+      color:orange !important;
+    }
   }
 }
