@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import Menu from './Menu';
 import Landing from './Landing';
 class App extends Component {
@@ -7,7 +6,6 @@ class App extends Component {
     return (<div className="landing">
              <Menu />
              <Landing />
-
            </div>)
 
   }

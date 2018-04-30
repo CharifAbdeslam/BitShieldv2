@@ -3,9 +3,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Mina', sans-serif; }
+  body .fadein-appear {
+    opacity: 0; }
+  body .fadein-appear.fadein-appear-active {
+    opacity: 1;
+    transition: opacity 2s ease; }
+  body .btn-outline-warning {
+    color: #F27420;
+    border-color: #F27420; }
+    body .btn-outline-warning:hover {
+      background-color: #F27420;
+      border-color: #F27420; }
   body .landing {
     height: 80vh;
-    background-image: linear-gradient(9deg, #000F18 34%, #0D3044 100%); }
+    background-image: linear-gradient(9deg, #000F18 50%, #0D3044 100%); }
   body .logo-menu {
     margin-bottom: 9px; }
   body .navbar-nav a {
@@ -21,4 +32,9 @@ body {
   body .navbar-nav .login-nav {
     border-right: 1px solid #D2D3D3; }
   body .nav-login a {
-    color: orange !important; }
+    color: orange; }
+  body .landing-banner h1 {
+    color: #D2D3D3;
+    font-weight: 700; }
+  body .landing-banner p {
+    color: #D2D3D3; }
