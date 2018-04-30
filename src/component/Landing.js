@@ -7,7 +7,7 @@ import Liveprice from './Liveprice'
 const Landing = () => {
   return (<Container className="mt-5 landing-banner">
     <Row>
-      <Col md="6">
+      <Col md="5">
         <ReactCSSTransitionGroup
           transitionName="fadein" transitionAppear={true}
           transitionEnterTimeout={1000} transitionLeaveTimeout={1000}

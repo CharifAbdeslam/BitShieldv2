@@ -6,6 +6,7 @@ import {createStore, applyMiddleware} from 'redux';
 import reducers from './reducers/index';
 import thunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'cryptocoins-icons/webfont/cryptocoins.css';
 import './index.css';
 import App from './component/App';
 import registerServiceWorker from './registerServiceWorker';

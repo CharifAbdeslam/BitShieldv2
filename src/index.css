@@ -3,6 +3,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Mina', sans-serif; }
+  body .crypto-table {
+    font-size: 1rem;
+    line-height: 1; }
+  body .liveprice-wrapper {
+    background-color: #021521;
+    padding: 0 15px; }
+  body .live-price-table {
+    color: #D2D3D3;
+    font-size: 12px; }
+    body .live-price-table thead th {
+      border-bottom: none;
+      border-top: none; }
+    body .live-price-table td,
+    body .live-price-table th {
+      border-top: 0.1px solid #87848433; }
   body .fadein-appear {
     opacity: 0; }
   body .fadein-appear.fadein-appear-active {
