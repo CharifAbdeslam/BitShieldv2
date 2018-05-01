@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
 import Menu from './Menu';
 import Landing from './Landing';
+import Features from './Features';
 class App extends Component {
   render() {
-    return (<div className="landing">
+    return (<div>
+      <div className="landing">
              <Menu />
              <Landing />
-           </div>)
+           </div>
+         <Features />
+    </div>
+      );
 
   }
 }

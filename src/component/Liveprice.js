@@ -1,65 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LiveRow from './LiveRow';
 import {connect} from 'react-redux';
 import {_getLive} from '../actions/index';
-import {Col,Table} from 'reactstrap';
+import {Col, Table} from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+import Loader from '../img/loader-big.svg';
 
 class Liveprice extends React.Component {
-  componentWillMount(){
+  componentWillMount() {
+    /* To do setInterval every one minute */
     this.props._getLive()
   }
   render() {
     const {price} = this.props;
-    if(price.length === 0){
-    return <h1>Loading ......</h1>
+    let bodyStatus = (<div className="liveprice-wrapper">
+      <Table className="mt-4 live-price-table" responsive hover>
+        <thead>
+          <tr>
+            <th><FontAwesomeIcon icon={faStar}/></th>
+            <th>SYMBOL</th>
+            <th>LAST PRICE</th>
+            <th>24 CHANGE</th>
+            <th>24 HIGH</th>
+            <th>24 LOW</th>
+            <th>24 VOLUME</th>
+          </tr>
+        </thead>
+        <tbody><LiveRow price={price[0]} icon="cc BTC"/>
+          <LiveRow price={price[1]} icon="cc ETH"/>
+          <LiveRow price={price[2]} icon="cc BCH"/>
+          <LiveRow price={price[3]} icon="cc XRP"/>
+          <LiveRow price={price[4]} icon="cc LTC"/>
+          <LiveRow price={price[5]} icon="cc XMR"/>
+          <LiveRow price={price[6]} icon="cc ETC"/>
+          <LiveRow price={price[7]} icon="cc IOTA"/>
+          <LiveRow price={price[8]} icon="cc DASH"/>
+          <LiveRow price={price[9]} icon="cc NEO"/></tbody>
+      </Table>
+    </div>);
+
+    if (price.length === 0) {
+      bodyStatus = (<div className="ml-5 text-center" style={{width:'100%'}}>
+        <img src={Loader} alt="Loading..."/>
+      </div>);
     }
     return (<Col md="7">
-      <div className="liveprice-wrapper">
-        <Table className="mt-4 live-price-table">
-          <thead>
-            <tr>
-              <th><FontAwesomeIcon icon={faStar}/></th>
-              <th>SYMBOL</th>
-              <th>LAST PRICE</th>
-              <th>24 CHANGE</th>
-              <th>24 HIGH</th>
-              <th>24 LOW</th>
-              <th>24 VOLUME</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th><FontAwesomeIcon icon={faStar}/></th>
-              <td className="crypto-table"><i className="cc BTC"/></td>
-              <td>{price[0][7]}</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </Table>
-      </div>
-
-    </Col>)
+      {bodyStatus}
+    </Col>);
   }
-
 }
-const mapStateToProps=state=> ({price: state.price.live});
+const mapStateToProps = state => ({price: state.price.live});
 export default connect(mapStateToProps, {_getLive})(Liveprice);
 
 Liveprice.propTypes = {
-price:PropTypes.array,
-_getLive:PropTypes.func
+  price: PropTypes.array.isRequired,
+  _getLive: PropTypes.func.isRequired
 };
