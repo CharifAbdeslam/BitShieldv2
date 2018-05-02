@@ -42,11 +42,11 @@ class Liveprice extends React.Component {
     </div>);
 
     if (price.length === 0) {
-      bodyStatus = (<div className="ml-5 text-center" style={{width:'100%'}}>
-        <img src={Loader} alt="Loading..."/>
+      bodyStatus = (<div className="text-center" style={{width:'100%',minHeigth:'500px'}}>
+        <img src={Loader} alt="Loading..." className="mt-5"/>
       </div>);
     }
-    return (<Col md="7">
+    return (<Col md="7" className="mt-3">
       {bodyStatus}
     </Col>);
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../img/logo.png';
+import Login from './Login';
 import {
   Navbar,
   UncontrolledDropdown,
@@ -37,14 +38,7 @@ import {
           </DropdownMenu>
         </UncontrolledDropdown>
       </Nav>
-      <Nav className="mr-5 nav-login" navbar>
-        <NavItem className="login-nav pr-3">
-          <NavLink href="#">LOGIN</NavLink>
-        </NavItem>
-        <NavItem className="pl-3">
-          <NavLink href="#">SIGN UP</NavLink>
-        </NavItem>
-      </Nav>
+ <Login />
   </Navbar>
   )
 }

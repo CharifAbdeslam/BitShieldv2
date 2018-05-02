@@ -6,10 +6,12 @@ $blue: #021521;
 $grey: #87848433;
 $greyHard:#504f4f;
 body {
+  background-color: #F5F5F5;
   .features-wrapper{
-    h3,p{
+    h3,p,h4{
       color:$greyHard;
     }
+
   }
   .crypto-table {
     font-size: 1rem;
@@ -59,7 +61,7 @@ body {
   }
 
   .landing {
-    height: 80vh;
+    min-height: 80vh;
     background-image: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
   }
 
