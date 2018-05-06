@@ -2,16 +2,22 @@ import React, {Component} from 'react';
 import Menu from './Menu';
 import Landing from './Landing';
 import Features from './Features';
+import LoginForm from "./LoginForm";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 class App extends Component {
   render() {
-    return (<div>
+    return (<Router>
+      <div>
       <div className="landing">
-             <Menu />
-             <Landing />
-           </div>
-         <Features />
+        <Menu/>
+        <Switch>
+          <Route exact path="/" component={Landing}/>
+          <Route exact path="/login" component={LoginForm}/>
+        </Switch>
+      </div>
+      <Features/>
     </div>
-      );
+    </Router>);
 
   }
 }

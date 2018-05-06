@@ -4,15 +4,19 @@ $black: #212121;
 $orange: #F27420;
 $blue: #021521;
 $grey: #87848433;
-$greyHard:#504f4f;
+$greyHard: #504f4f;
+
 body {
   background-color: #F5F5F5;
-  .features-wrapper{
-    h3,p,h4{
-      color:$greyHard;
-    }
 
+  .features-wrapper {
+    h3,
+    h4,
+    p {
+      color: $greyHard;
+    }
   }
+
   .crypto-table {
     font-size: 1rem;
     line-height: 1;
@@ -23,7 +27,7 @@ body {
 
   .liveprice-wrapper {
     background-image: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
-    padding: 15px 15px;
+    padding: 15px;
   }
 
   .live-price-table {
@@ -63,6 +67,16 @@ body {
   .landing {
     min-height: 80vh;
     background-image: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
+
+    a {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      line-height: 3;
+      text-decoration: none;
+    }
+    .dropdown-toggle{
+      line-height: 1.9;
+    }
   }
 
   .logo-menu {

@@ -1,12 +1,11 @@
 import React from 'react';
 import logo from '../img/logo.png';
-import Login from './Login';
+import {Link} from 'react-router-dom';
 import {
   Navbar,
   UncontrolledDropdown,
   Nav,
   NavItem,
-  NavLink,
   DropdownToggle,
   DropdownMenu,
   DropdownItem} from 'reactstrap';
@@ -15,12 +14,9 @@ import {
     <Navbar expand="md" className="ml-5">
     <img  className="logo-menu" src={logo} width="170" alt="BitShield"/>
       <Nav className="mr-auto ml-5" navbar>
-        <NavItem>
-          <NavLink href="#">EXCHANGE</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="#">SUPPORT</NavLink>
-        </NavItem>
+          <Link to="/">HOME</Link>
+          <Link to="/exchange">EXCHANGE</Link>
+          <Link to="/support">SUPPORT</Link>
         <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav caret>
             MORE
@@ -38,7 +34,14 @@ import {
           </DropdownMenu>
         </UncontrolledDropdown>
       </Nav>
- <Login />
+      <Nav className="mr-5 nav-login" navbar>
+        <NavItem className="login-nav pr-3">
+          <Link to="/login">LOGIN</Link>
+        </NavItem>
+        <NavItem className="pl-3">
+          <Link to="/signup">SIGN UP</Link>
+        </NavItem>
+      </Nav>
   </Navbar>
   )
 }
