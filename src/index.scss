@@ -8,7 +8,12 @@ $greyHard: #504f4f;
 
 body {
   background-color: #F5F5F5;
-
+.login-wrapper{
+  label{
+    margin: 0.5rem 0;
+    color: $white;
+  }
+}
   .features-wrapper {
     h3,
     h4,

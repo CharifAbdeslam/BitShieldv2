@@ -4,6 +4,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Mina', sans-serif; }
+  body .login-wrapper label {
+    margin: 0.5rem 0;
+    color: #D2D3D3; }
   body .features-wrapper h3,
   body .features-wrapper h4,
   body .features-wrapper p {

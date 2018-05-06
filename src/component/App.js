@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Menu from './Menu';
 import Landing from './Landing';
 import Features from './Features';
-import LoginForm from "./LoginForm";
+import Login from "./Login";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
         <Menu/>
         <Switch>
           <Route exact path="/" component={Landing}/>
-          <Route exact path="/login" component={LoginForm}/>
+          <Route exact path="/login" component={Login}/>
         </Switch>
       </div>
       <Features/>
