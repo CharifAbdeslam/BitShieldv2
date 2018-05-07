@@ -36,7 +36,7 @@ import {
       </Nav>
       <Nav className="mr-5 nav-login" navbar>
         <NavItem className="login-nav pr-3">
-          <Link to="/login">LOGIN</Link>
+          <Link to="/login">LOG IN</Link>
         </NavItem>
         <NavItem className="pl-3">
           <Link to="/signup">SIGN UP</Link>

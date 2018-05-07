@@ -17,7 +17,7 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
   </div>
 );
 const Login = props => {
-const {handleSubmit, submitting } = props;
+const {error,handleSubmit, submitting } = props;
     return (<ReactCSSTransitionGroup
       transitionName="fadein"
       transitionAppear={true}
@@ -25,7 +25,7 @@ const {handleSubmit, submitting } = props;
       transitionLeaveTimeout={1000}
       transitionAppearTimeout={1000}>
       <Container className="mt-5 d-flex justify-content-center">
-      <Col md="4" className="p-4 from-warraper">
+      <Col sm={4} className="p-4 from-warraper">
       <form onSubmit={handleSubmit(submit)}>
       <Field
         name="username"
@@ -39,9 +39,10 @@ const {handleSubmit, submitting } = props;
         component={renderField}
         label="Password"
       />
-      <div className="mt-4 d-flex justify-content-between">
-        <Button size="lg" color="warning" outline type="submit" disabled={submitting}>LOG IN</Button>
-        <Button size="lg" type="button" className="ml-2">RESET PASSWORD</Button>
+      {error && <span className="text-danger"><strong>{error}</strong></span>}
+      <div className="mt-4">
+        <Button  color="warning" outline type="submit" disabled={submitting}>LOG IN</Button>
+        <Button  type="button" className="ml-2">RESET PASSWORD</Button>
       </div>
     <Link to="/signup">
     <label className="mt-2 logintosigntext">Dont have an account ?</label>

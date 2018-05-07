@@ -14,13 +14,13 @@ export const _getLive =()=> dispatch =>{
 export const submit = (values) => {
     if (!values.username) {
       throw new SubmissionError({
-        username: 'Please enter a valid username and password',
-        _error: 'Login failed!',
+        username: 'Username cant be empty',
+        _error: 'Please check your username and password',
       });
     } else if (!values.password) {
       throw new SubmissionError({
-        password: 'Please enter a valid username and password',
-        _error: 'Login failed!',
+        password: 'Password cant be empty',
+        _error: 'Please check your username and password',
       });
     }else {
       console.log(JSON.stringify(values))

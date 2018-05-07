@@ -16,8 +16,6 @@ body {
     cursor: pointer; }
     body .logintosigntext:hover {
       color: white; }
-  body .login-wrapper input {
-    height: 55px; }
   body .login-wrapper label {
     margin: 0.5rem 0;
     color: #D2D3D3; }
