@@ -12,7 +12,12 @@ const Landing = () => {
           size: 3,
           offset: 1
         }}>
-        <ReactCSSTransitionGroup transitionName="fadein" transitionAppear={true} transitionEnterTimeout={1000} transitionLeaveTimeout={1000} transitionAppearTimeout={1000}>
+        <ReactCSSTransitionGroup
+          transitionName="fadein"
+          transitionAppear={true}
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={1000}
+          transitionAppearTimeout={1000}>
           <h1>
             <FontAwesomeIcon icon={faGlobe} size="2x" style={{
                 color: '#F27420'

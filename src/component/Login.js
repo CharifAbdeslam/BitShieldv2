@@ -1,6 +1,8 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Field, reduxForm } from 'redux-form';
 import {submit} from '../actions/index';
+import {Link} from 'react-router-dom';
 import {Container,
         Button,
         Col,
@@ -15,9 +17,15 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
   </div>
 );
 const Login = props => {
-const { error, handleSubmit, pristine, reset, submitting } = props;
-    return (<Container className="mt-5 d-flex justify-content-center">
-      <Col md="4" className="p-4">
+const {handleSubmit, submitting } = props;
+    return (<ReactCSSTransitionGroup
+      transitionName="fadein"
+      transitionAppear={true}
+      transitionEnterTimeout={1000}
+      transitionLeaveTimeout={1000}
+      transitionAppearTimeout={1000}>
+      <Container className="mt-5 d-flex justify-content-center">
+      <Col md="4" className="p-4 from-warraper">
       <form onSubmit={handleSubmit(submit)}>
       <Field
         name="username"
@@ -31,13 +39,17 @@ const { error, handleSubmit, pristine, reset, submitting } = props;
         component={renderField}
         label="Password"
       />
-      {error && <strong>{error}</strong>}
-      <div>
-        <Button size="lg" color="success" type="submit" disabled={submitting}>LOGIN</Button>
+      <div className="mt-4 d-flex justify-content-between">
+        <Button size="lg" color="warning" outline type="submit" disabled={submitting}>LOG IN</Button>
+        <Button size="lg" type="button" className="ml-2">RESET PASSWORD</Button>
       </div>
+    <Link to="/signup">
+    <label className="mt-2 logintosigntext">Dont have an account ?</label>
+  </Link>
     </form>
   </Col>
-  </Container>)
+  </Container>
+</ReactCSSTransitionGroup>)
 
 }
 export default reduxForm({form: 'submitValidation'})(Login);

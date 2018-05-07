@@ -1,9 +1,9 @@
 import { SubmissionError } from 'redux-form';
+
 const URL = "https://api.bitfinex.com/v2/tickers?symbols=";
 const TICKERS="tBTCUSD,tETHUSD,tBCHUSD,tXRPUSD,tLTCUSD,tXMRUSD,tETCBTC,tIOTUSD,tDSHUSD,tNEOUSD";
 export const LIVE_PRICE = "LIVE_PRICE";
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 export const _getLive =()=> dispatch =>{
   fetch(`${URL}${TICKERS}`).then(res => res.json())
             .then(data => {
@@ -11,15 +11,15 @@ export const _getLive =()=> dispatch =>{
             });
 };
 
-export function submit(values) {
+export const submit = (values) => {
     if (!values.username) {
       throw new SubmissionError({
-        username: 'User does not exist',
+        username: 'Please enter a valid username and password',
         _error: 'Login failed!',
       });
     } else if (!values.password) {
       throw new SubmissionError({
-        password: 'Wrong password',
+        password: 'Please enter a valid username and password',
         _error: 'Login failed!',
       });
     }else {
