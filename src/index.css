@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Mina:400,700");
+.white-text {
+  color: #D2D3D3; }
+
 body {
   background-color: #F5F5F5;
   margin: 0;

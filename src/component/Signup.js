@@ -46,12 +46,13 @@ const Signup = (props) => {
     <Container className="d-flex justify-content-center mt-5">
       <Col sm={4} className="from-warraper p-4">
       <form onSubmit={handleSubmit}>
-        <Field name="username" type="text" component={renderField} label="Username"/>
-        <Field name="email" type="email" component={renderField} label="Email"/>
-        <Field name="password" type="password" component={renderField} label="Password"/>
-        <Field name="passwordConfirm" type="password" component={renderField} label="Confirm Password"/>
+        <h3 className="text-center white-text">SIGN UP</h3>
+        <Field name="username" type="text" component={renderField} label="Username:"/>
+        <Field name="email" type="email" component={renderField} label="Email:"/>
+        <Field name="password" type="password" component={renderField} label="Password:"/>
+        <Field name="passwordConfirm" type="password" component={renderField} label="Repeat Password:"/>
         <div className="mt-3">
-          <Button type="submit" color="warning" outline disabled={pristine || submitting}>SUBMIT</Button>
+          <Button type="submit" color="warning" outline disabled={submitting}>SUBMIT</Button>
           <Button type="button" className="ml-3" disabled={pristine || submitting} onClick={reset}>RESET</Button>
         </div>
         <Link to="/login">

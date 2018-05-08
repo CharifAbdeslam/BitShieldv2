@@ -6,6 +6,9 @@ $blue: #021521;
 $grey: #87848433;
 $greyHard: #504f4f;
 $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
+.white-text{
+  color:$white;
+}
 body {
   .login-failed {
     color: red;

@@ -27,17 +27,18 @@ const {error,handleSubmit, submitting } = props;
       <Container className="mt-5 d-flex justify-content-center">
       <Col sm={4} className="p-4 from-warraper">
       <form onSubmit={handleSubmit(submit)}>
+        <h3 className="text-center white-text">LOG IN</h3>
       <Field
         name="username"
         type="text"
         component={renderField}
-        label="Username"
+        label="Username:"
       />
       <Field
         name="password"
         type="password"
         component={renderField}
-        label="Password"
+        label="Password:"
       />
       {error && <span className="text-danger"><strong>{error}</strong></span>}
       <div className="mt-4">
