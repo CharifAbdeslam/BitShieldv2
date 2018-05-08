@@ -32,7 +32,6 @@ body {
     }
 
     span {
-      color: red;
       font-weight: 700;
     }
   }
@@ -75,11 +74,13 @@ body {
 
   .fadein-appear {
     opacity: 0;
+    transform: translateY(20px);
   }
 
   .fadein-appear.fadein-appear-active {
     opacity: 1;
-    transition: opacity 2s ease;
+    transform: translateY(0px);
+    transition: all 0.5s ease;
   }
 
   .btn-outline-warning {

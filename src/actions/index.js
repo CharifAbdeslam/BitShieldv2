@@ -15,14 +15,18 @@ export const submit = (values) => {
     if (!values.username) {
       throw new SubmissionError({
         username: 'Username cant be empty',
-        _error: 'Please check your username and password',
+        _error: 'Login failed',
       });
     } else if (!values.password) {
       throw new SubmissionError({
         password: 'Password cant be empty',
-        _error: 'Please check your username and password',
+        _error: 'Login failed',
       });
     }else {
       console.log(JSON.stringify(values))
     }
 }
+
+export const _signUp = (values)=> {
+  console.log(JSON.stringify(values));
+};

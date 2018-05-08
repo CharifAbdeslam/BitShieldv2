@@ -20,7 +20,6 @@ body {
     margin: 0.5rem 0;
     color: #D2D3D3; }
   body .login-wrapper span {
-    color: red;
     font-weight: 700; }
   body .features-wrapper h3,
   body .features-wrapper h4,
@@ -42,10 +41,12 @@ body {
     body .live-price-table th {
       border-top: 0.1px solid #87848433; }
   body .fadein-appear {
-    opacity: 0; }
+    opacity: 0;
+    transform: translateY(20px); }
   body .fadein-appear.fadein-appear-active {
     opacity: 1;
-    transition: opacity 2s ease; }
+    transform: translateY(0px);
+    transition: all 0.5s ease; }
   body .btn-outline-warning {
     color: #F27420;
     border-color: #F27420; }
