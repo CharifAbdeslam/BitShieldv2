@@ -1,7 +1,7 @@
 import { SubmissionError } from 'redux-form';
 
 const URL = "https://api.bitfinex.com/v2/tickers?symbols=";
-const TICKERS="tBTCUSD,tETHUSD,tBCHUSD,tXRPUSD,tLTCUSD,tXMRUSD,tETCBTC,tIOTUSD,tDSHUSD,tNEOUSD";
+const TICKERS="tETHBTC,tBCHBTC,tXRPBTC,tLTCBTC,tXMRBTC,tETCBTC,tIOTBTC,tDSHBTC,tNEOBTC,tZECBTC,tEOSBTC,tOMGBTC";
 export const LIVE_PRICE = "LIVE_PRICE";
 
 export const _getLive =()=> dispatch =>{

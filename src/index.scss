@@ -5,11 +5,17 @@ $orange: #F27420;
 $blue: #021521;
 $grey: #87848433;
 $greyHard: #504f4f;
+$gerIntense: #090909;
 $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
 .white-text{
   color:$white;
 }
+.exchange-wrapper{
+  background-image: none !important;
+  background-color: $gerIntense;
+}
 body {
+  overflow-x: hidden;
   .login-failed {
     color: red;
     font-weight: 700;
@@ -40,6 +46,7 @@ body {
   }
 
   .features-wrapper {
+    background-color: white;
     h3,
     h4,
     p {
@@ -48,7 +55,7 @@ body {
   }
 
   .crypto-table {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1;
   }
   margin: 0;
@@ -83,7 +90,7 @@ body {
   .fadein-appear.fadein-appear-active {
     opacity: 1;
     transform: translateY(0px);
-    transition: all 0.5s ease;
+    transition: all 1s ease;
   }
 
   .btn-outline-warning {
@@ -97,7 +104,7 @@ body {
   }
 
   .landing {
-    min-height: 80vh;
+    min-height: 100vh;
     background-image: $guardian;
 
     a {

@@ -2,7 +2,12 @@
 .white-text {
   color: #D2D3D3; }
 
+.exchange-wrapper {
+  background-image: none !important;
+  background-color: #090909; }
+
 body {
+  overflow-x: hidden;
   background-color: #F5F5F5;
   margin: 0;
   padding: 0;
@@ -24,12 +29,14 @@ body {
     color: #D2D3D3; }
   body .login-wrapper span {
     font-weight: 700; }
-  body .features-wrapper h3,
-  body .features-wrapper h4,
-  body .features-wrapper p {
-    color: #504f4f; }
+  body .features-wrapper {
+    background-color: white; }
+    body .features-wrapper h3,
+    body .features-wrapper h4,
+    body .features-wrapper p {
+      color: #504f4f; }
   body .crypto-table {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1; }
   body .liveprice-wrapper {
     background-image: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
@@ -49,7 +56,7 @@ body {
   body .fadein-appear.fadein-appear-active {
     opacity: 1;
     transform: translateY(0px);
-    transition: all 0.5s ease; }
+    transition: all 1s ease; }
   body .btn-outline-warning {
     color: #F27420;
     border-color: #F27420; }
@@ -57,7 +64,7 @@ body {
       background-color: #F27420;
       border-color: #F27420; }
   body .landing {
-    min-height: 80vh;
+    min-height: 100vh;
     background-image: linear-gradient(9deg, #000F18 50%, #0D3044 100%); }
     body .landing a {
       padding-right: 0.5rem;

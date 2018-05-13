@@ -28,16 +28,20 @@ class Liveprice extends React.Component {
             <th>24 VOLUME</th>
           </tr>
         </thead>
-        <tbody><LiveRow price={price[0]} icon="cc BTC"/>
-          <LiveRow price={price[1]} icon="cc ETH"/>
-          <LiveRow price={price[2]} icon="cc BCH"/>
-          <LiveRow price={price[3]} icon="cc XRP"/>
-          <LiveRow price={price[4]} icon="cc LTC"/>
-          <LiveRow price={price[5]} icon="cc XMR"/>
-          <LiveRow price={price[6]} icon="cc ETC"/>
-          <LiveRow price={price[7]} icon="cc IOTA"/>
-          <LiveRow price={price[8]} icon="cc DASH"/>
-          <LiveRow price={price[9]} icon="cc NEO"/></tbody>
+        <tbody>
+          <LiveRow price={price[0]} icon="cc ETH"/>
+          <LiveRow price={price[1]} icon="cc BCH"/>
+          <LiveRow price={price[2]} icon="cc XRP"/>
+          <LiveRow price={price[3]} icon="cc LTC"/>
+          <LiveRow price={price[4]} icon="cc XMR"/>
+          <LiveRow price={price[5]} icon="cc ETC"/>
+          <LiveRow price={price[6]} icon="cc IOTA"/>
+          <LiveRow price={price[7]} icon="cc DASH"/>
+          <LiveRow price={price[8]} icon="cc NEO"/>
+          <LiveRow price={price[9]} icon="cc ZEC"/>
+          <LiveRow price={price[10]} icon="cc EOS"/>
+          <LiveRow price={price[11]} icon="cc OMG"/>
+        </tbody>
       </Table>
     </div>);
 

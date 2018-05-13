@@ -5,8 +5,10 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faUserSecret from '@fortawesome/fontawesome-free-solid/faUserSecret';
 import faShield from '@fortawesome/fontawesome-free-solid/faShieldAlt';
 const Features = ()=>{
-  return(<Container className="mt-5 features-wrapper" fluid>
-    <Row>
+  return(<div>
+    <Container className="mt-5 features-wrapper p-0" fluid>
+        <div style={{'width':"100%",'height':'50px','background-color':'black'}}></div>
+    <Row className="mt-5">
       <Col>
         <Col className="d-flex justify-content-center mb-3">
           <img src={Logo} alt="logo goes here" width="500"/>
@@ -34,6 +36,7 @@ const Features = ()=>{
       </Col>
     </Row>
   </Container>
+</div>
 );
 }
 export default Features;

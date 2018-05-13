@@ -25,20 +25,20 @@ const {error,handleSubmit, submitting } = props;
       transitionLeaveTimeout={1000}
       transitionAppearTimeout={1000}>
       <Container className="mt-5 d-flex justify-content-center">
-      <Col sm={4} className="p-4 from-warraper">
+      <Col sm={6} className="p-4 from-warraper">
       <form onSubmit={handleSubmit(submit)}>
         <h3 className="text-center white-text">LOG IN</h3>
       <Field
         name="username"
         type="text"
         component={renderField}
-        label="Username:"
+        label="Username"
       />
       <Field
         name="password"
         type="password"
         component={renderField}
-        label="Password:"
+        label="Password"
       />
       {error && <span className="text-danger"><strong>{error}</strong></span>}
       <div className="mt-4">
@@ -46,8 +46,10 @@ const {error,handleSubmit, submitting } = props;
         <Button  type="button" className="ml-2">RESET PASSWORD</Button>
       </div>
     <Link to="/signup">
-    <label className="mt-2 logintosigntext">Dont have an account ?</label>
+    <label className="mt-2 mb-0 logintosigntext">Dont have an account ?</label>
   </Link>
+  <label className="text-white pl-2" style={{fontSize:'12px'}}>
+    Create one to start trading on a world class exchange platform.</label>
     </form>
   </Col>
   </Container>

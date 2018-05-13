@@ -7,7 +7,7 @@ const LiveRow =({price,icon})=>{
     <tr>
       <th><FontAwesomeIcon icon={faStar}/></th>
       <td className="crypto-table"><i className={icon}/></td>
-      <td>{price[7].toFixed(3)}</td>
+      <td>{price[7].toFixed(8)}</td>
       <td>{price[6] > 0 ?
            <span className="text-success">{(price[6]*100).toFixed(1)}%</span>:
            <span className="text-danger">{(price[6]*100).toFixed(1)}%</span>}</td>
