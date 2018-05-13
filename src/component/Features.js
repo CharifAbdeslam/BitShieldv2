@@ -7,7 +7,7 @@ import faShield from '@fortawesome/fontawesome-free-solid/faShieldAlt';
 const Features = ()=>{
   return(<div>
     <Container className="mt-5 features-wrapper p-0" fluid>
-        <div style={{'width':"100%",'height':'50px','background-color':'black'}}></div>
+        <div style={{'width':"100%",'height':'50px','backgroundColor':'black'}}></div>
     <Row className="mt-5">
       <Col>
         <Col className="d-flex justify-content-center mb-3">

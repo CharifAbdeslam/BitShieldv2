@@ -11,8 +11,8 @@ const LiveRow =({price,icon})=>{
       <td>{price[6] > 0 ?
            <span className="text-success">{(price[6]*100).toFixed(1)}%</span>:
            <span className="text-danger">{(price[6]*100).toFixed(1)}%</span>}</td>
-      <td>{price[9].toFixed(3)}</td>
-      <td>{price[10].toFixed(3)}</td>
+      <td>{price[9].toFixed(8)}</td>
+      <td>{price[10].toFixed(8)}</td>
       <td>{price[8]}</td>
     </tr>
   )

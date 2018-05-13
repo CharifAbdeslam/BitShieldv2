@@ -46,7 +46,7 @@ class Liveprice extends React.Component {
     </div>);
 
     if (price.length === 0) {
-      bodyStatus = (<div className="text-center" style={{width:'100%',minHeigth:'500px'}}>
+      bodyStatus = (<div className="text-center" style={{width:'100%',minHeigth:'1000px'}}>
         <img src={Loader} alt="Loading..." className="mt-5"/>
       </div>);
     }

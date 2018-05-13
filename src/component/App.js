@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Menu from './Menu';
 import Landing from './Landing';
-import Exchange from './exchanger/Exchange'
+import Exchange from './exchange/Exchange'
 import Login from "./Login";
 import Signup from "./Signup";
 import {_signUp} from "../actions/index";
