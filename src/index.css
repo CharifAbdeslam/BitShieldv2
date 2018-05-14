@@ -1,10 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Mina:400,700");
+.text-danger {
+  color: #7B1A1F !important; }
+
+.text-success {
+  color: #78C653 !important; }
+
 .white-text {
   color: #D2D3D3; }
 
 .exchange-wrapper {
   background-image: none !important;
   background-color: #090909; }
+
+.exchange-field {
+  background-color: #1B262D;
+  border-radius: 6px; }
+
+.exchange-price-wrapper {
+  min-width: 320px; }
+  .exchange-price-wrapper h1 {
+    font-size: 3.5rem; }
+  .exchange-price-wrapper h1, .exchange-price-wrapper span {
+    color: #D2D3D3; }
+
+.text-grey {
+  color: grey !important; }
 
 body {
   overflow-x: hidden;
@@ -49,7 +69,7 @@ body {
       border-top: none; }
     body .live-price-table td,
     body .live-price-table th {
-      border-top: 0.1px solid #87848433; }
+      border-top: 0.1px solid #1B262D; }
   body .fadein-appear {
     opacity: 0;
     transform: translateY(20px); }

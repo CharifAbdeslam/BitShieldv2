@@ -1,5 +1,7 @@
 import React from 'react';
-
+import {Container,Row} from 'reactstrap';
+import {connect} from 'react-redux';
+import LeftWrapperExchange from './LeftWrapperExchange';
 class Exchange extends React.Component {
   componentDidMount() {
     const landing = document.getElementById('landing');
@@ -10,7 +12,12 @@ class Exchange extends React.Component {
     landing.classList.remove("exchange-wrapper");
   }
   render() {
-    return (<h1 className="text-white">Hellooo world</h1>)
+    return (<Container fluid>
+        <Row className="mt-2">
+    <LeftWrapperExchange {...this.props}/>
+  </Row>
+    </Container>)
   }
 }
-export default Exchange;
+const mapStateToProps = state =>({price:state.price.live});
+export default connect(mapStateToProps)(Exchange);

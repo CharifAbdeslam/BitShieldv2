@@ -3,9 +3,17 @@ $white: #D2D3D3;
 $black: #212121;
 $orange: #F27420;
 $blue: #021521;
-$grey: #87848433;
+$grey: #1B262D;
 $greyHard: #504f4f;
 $gerIntense: #090909;
+$red:#7B1A1F;
+$green:#78C653;
+.text-danger{
+  color:$red !important;
+}
+.text-success{
+  color:$green !important;
+}
 $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
 .white-text{
   color:$white;
@@ -13,6 +21,22 @@ $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
 .exchange-wrapper{
   background-image: none !important;
   background-color: $gerIntense;
+}
+.exchange-field{
+  background-color: $grey;
+  border-radius: 6px;
+}
+.exchange-price-wrapper{
+  min-width: 320px;
+  h1{
+    font-size: 3.5rem;
+  }
+  h1,span{
+    color:$white;
+  }
+}
+.text-grey{
+  color:grey !important;
 }
 body {
   overflow-x: hidden;
