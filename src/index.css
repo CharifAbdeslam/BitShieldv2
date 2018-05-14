@@ -13,7 +13,7 @@
   background-color: #090909; }
 
 .exchange-field {
-  background-color: #1B262D;
+  background: linear-gradient(to bottom, #282f33 0%, #1b262d 100%);
   border-radius: 6px; }
 
 .exchange-price-wrapper {
