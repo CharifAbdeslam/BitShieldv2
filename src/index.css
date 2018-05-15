@@ -13,8 +13,8 @@
   background-color: #090909; }
 
 .exchange-field {
-  background: linear-gradient(to bottom, #282f33 0%, #1b262d 100%);
-  border-radius: 6px; }
+  background-color: #1b262d;
+  border-radius: 3px; }
 
 .exchange-price-wrapper {
   min-width: 320px; }

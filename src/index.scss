@@ -8,13 +8,14 @@ $greyHard: #504f4f;
 $gerIntense: #090909;
 $red:#7B1A1F;
 $green:#78C653;
+$guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
 .text-danger{
   color:$red !important;
 }
 .text-success{
   color:$green !important;
 }
-$guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
+
 .white-text{
   color:$white;
 }
@@ -23,8 +24,8 @@ $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
   background-color: $gerIntense;
 }
 .exchange-field{
-  background:linear-gradient(to bottom, rgba(40,47,51,1) 0%, rgba(27,38,45,1) 100%);
-  border-radius: 6px;
+  background-color: rgba(27,38,45,1);
+  border-radius: 3px;
 }
 .exchange-price-wrapper{
   min-width: 320px;
