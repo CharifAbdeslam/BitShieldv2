@@ -14,9 +14,6 @@ class Exchange extends React.Component {
     landing.classList.remove("exchange-wrapper");
   }
   render() {
-    if(this.props.ticker.length === 0){
-      return(<div>Loading .........</div>)
-    }
     return (<Container fluid>
         <Row className="mt-2">
     <LeftWrapperExchange {...this.props}/>

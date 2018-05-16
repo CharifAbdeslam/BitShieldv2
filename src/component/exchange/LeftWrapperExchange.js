@@ -3,6 +3,7 @@ import {Row , Col} from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faSortDown from '@fortawesome/fontawesome-free-solid/faSortDown';
 import faSortUp from '@fortawesome/fontawesome-free-solid/faSortUp';
+import loaderSm from '../../img/loader-sm.svg';
 const lineHeight={
   lineHeight:1.2
 };
@@ -13,13 +14,20 @@ const fontSize={
 class LeftWrapperExchange extends React.Component{
   render(){
     const {ticker} = this.props;
-    console.log(ticker[8]);
-    let vol = (ticker[7] / 1000).toFixed(3),
-        low = ticker[9].toFixed(6),
-        hight = ticker[8].toFixed(6),
-        avg = ticker[6].toFixed(6),
-        daylichange = (ticker[5] * 100).toFixed(2).toString().replace("-",""),
-        daylichangePre = ticker[4].toFixed(2).toString().replace("-","");
+    let vol =<img src={loaderSm} alt="0000"/> ,
+    low =<img src={loaderSm} alt="0000"/> ,
+    hight =<img src={loaderSm} alt="0000"/> ,
+    avg = <img src={loaderSm} alt="0000"/>,
+    daylichange =0.00 ,
+    daylichangePre =0.00;
+        if(ticker.length > 0) {
+          vol = (ticker[7] / 1000).toFixed(3),
+          low = ticker[9].toFixed(6),
+          hight = ticker[8].toFixed(6),
+          avg = ticker[6].toFixed(6),
+          daylichange = (ticker[5] * 100).toFixed(2).toString().replace("-",""),
+          daylichangePre = ticker[4].toFixed(2).toString().replace("-","");
+        }
     return(<div>
         <Col xs={2} className="exchange-price-wrapper exchange-field ml-2">
           <Row className="pl-2">
