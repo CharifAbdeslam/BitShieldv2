@@ -16,7 +16,9 @@ class LeftWrapperExchange extends React.Component{
     let vol = (price[0][8] / 1000).toFixed(3),
         low = price[0][10].toFixed(6),
         hight = price[0][9].toFixed(6),
-        avg = price[0][7].toFixed(6);
+        avg = price[0][7].toFixed(6),
+        daylichange = (price[0][6] * 100).toFixed(2).toString().replace("-",""),
+        daylichangePre = price[0][5].toFixed(2).toString().replace("-","");
     return(<div>
         <Col xs={2} className="exchange-price-wrapper exchange-field ml-2">
           <Row className="pl-2">
@@ -35,11 +37,11 @@ class LeftWrapperExchange extends React.Component{
             <Col xs={5} className="p-0 text-center mt-2" style={lineHeight}>
               <span>{avg}</span><br></br>
               {price[0][6] > 0 ?<span className="text-success" style={fontSize}>
-                   {price[0][5].toFixed(2)} <FontAwesomeIcon icon={faSortUp}/> (
-                   {(price[0][6]*100).toFixed(2)}%)</span>:
+                   {daylichangePre} <FontAwesomeIcon icon={faSortUp}/> (
+                   {daylichange}%)</span>:
                    <span className="text-danger" style={fontSize}>
-                   {price[0][5].toFixed(2)} <FontAwesomeIcon icon={faSortDown}/> (
-                   {(price[0][6]*100).toFixed(2)}%)</span>
+                   {daylichangePre} <FontAwesomeIcon icon={faSortDown}/> (
+                   {daylichange}%)</span>
                  }
                  <br></br><span style={fontSize}>
                    HIGH <span className="text-grey">{hight}</span>
