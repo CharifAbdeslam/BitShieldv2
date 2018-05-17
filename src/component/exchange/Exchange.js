@@ -1,27 +1,36 @@
 import React from 'react';
 import {Container,Row} from 'reactstrap';
-import {connect} from 'react-redux';
-import {_getTicker} from '../../actions/index';
 import LeftWrapperExchange from './LeftWrapperExchange';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
 class Exchange extends React.Component {
   componentDidMount() {
     const landing = document.getElementById('landing');
     landing.classList.add("exchange-wrapper");
-    this.props._getTicker();
   }
   componentWillUnmount() {
     const landing = document.getElementById('landing');
     landing.classList.remove("exchange-wrapper");
   }
+
   render() {
-    return (<Container fluid>
+    return (<Router>
+      <Container fluid>
         <Row className="mt-2">
-    <LeftWrapperExchange {...this.props}/>
+          <Switch>
+            <Route exact path="/exchange" component={(props)=>
+              <LeftWrapperExchange
+                symbol="tickerEth"
+                icon = "cc ETH"/>}/>
+            <Route exact path="/exchange/ETH:BTC" component={(props)=>
+              <LeftWrapperExchange
+                symbol="tickerEth"
+                icon = "cc ETH"/>}/>
+          </Switch>
   </Row>
-    </Container>)
+    </Container>
+    </Router>
+    )
   }
 }
-const mapStateToProps = state =>({
-  ticker:state.price.liveTicker
-  });
-export default connect(mapStateToProps,{_getTicker})(Exchange);
+export default Exchange;

@@ -13,8 +13,8 @@ export const _getLive =()=> dispatch =>{
               dispatch({type:LIVE_PRICE , payload:data})
             });
 };
-export const _getTicker =()=> dispatch =>{
-  socket.on("tickerEth",function(data){
+export const _getTicker =(tick)=> dispatch =>{
+  socket.on(tick,function(data){
       dispatch({type:LIVE_TICKER,payload:data})
   })
 

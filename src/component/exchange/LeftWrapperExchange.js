@@ -1,5 +1,8 @@
 import React from 'react';
 import {Row , Col} from 'reactstrap';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {_getTicker} from '../../actions/index';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faSortDown from '@fortawesome/fontawesome-free-solid/faSortDown';
 import faSortUp from '@fortawesome/fontawesome-free-solid/faSortUp';
@@ -11,28 +14,32 @@ const fontSize={
   fontSize:'12px',
   fontWeight:700
 };
+
 class LeftWrapperExchange extends React.Component{
+  componentDidMount(){
+    this.props._getTicker(this.props.symbol)
+  }
   render(){
-    const {ticker} = this.props;
-    let vol =<img src={loaderSm} alt="0000"/> ,
-    low =<img src={loaderSm} alt="0000"/> ,
-    hight =<img src={loaderSm} alt="0000"/> ,
-    avg = <img src={loaderSm} alt="0000"/>,
-    daylichange =0.00 ,
-    daylichangePre =0.00;
-        if(ticker.length > 0) {
-          vol = (ticker[7] / 1000).toFixed(3),
-          low = ticker[9].toFixed(6),
-          hight = ticker[8].toFixed(6),
-          avg = ticker[6].toFixed(6),
-          daylichange = (ticker[5] * 100).toFixed(2).toString().replace("-",""),
-          daylichangePre = ticker[4].toFixed(2).toString().replace("-","");
+    const {ticker,icon} = this.props;
+    let vol = <img src={loaderSm} alt="0000" className="ml-3 mr-3 mb-1"/>;
+    let low = <img src={loaderSm} alt="0000" className="ml-3 mr-3 mb-1" />;
+    let hight = <img src={loaderSm} alt="0000" className="ml-3 mr-3 mb-1" />;
+    let avg = <img src={loaderSm} alt="0000" className="ml-3 mr-3 mb-1" />;
+    let daylichange = "0.00";
+    let daylichangePre = "0.00";
+    if(ticker.length > 0) {
+        vol = (ticker[7] / 1000).toFixed(3);
+        low = ticker[9].toFixed(6);
+        hight = ticker[8].toFixed(6);
+        avg = ticker[6].toFixed(6);
+        daylichange = (ticker[5] * 100).toFixed(2).toString().replace("-","");
+        daylichangePre = ticker[4].toFixed(2).toString().replace("-","");
         }
     return(<div>
         <Col xs={2} className="exchange-price-wrapper exchange-field ml-2">
           <Row className="pl-2">
             <Col xs={2} className="p-0 text-center">
-              <h1 className="cc ETH m-0"></h1>
+              <h1 className={icon + ' m-0'}></h1>
             </Col>
             <Col xs={5} className="p-0 text-center mt-2" style={lineHeight}>
               <span>ETH/BTC</span><br></br>
@@ -61,5 +68,13 @@ class LeftWrapperExchange extends React.Component{
       </div>);
   }
 }
+const mapStateToProps = state =>({
+  ticker:state.price.liveTicker
+  });
+export default connect(mapStateToProps,{_getTicker})(LeftWrapperExchange);
 
-export default LeftWrapperExchange;
+LeftWrapperExchange.propTypes={
+  _getTicker:PropTypes.func.isRequired,
+  ticker:PropTypes.array.isRequired,
+  symbol:PropTypes.string.isRequired
+};
