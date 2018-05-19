@@ -11,7 +11,7 @@ import {
   DropdownItem} from 'reactstrap';
  const Menu =()=>{
   return(
-    <Navbar expand="md" className="ml-5">
+    <Navbar expand="md" className="ml-5" id="main-nav">
     <img  className="logo-menu" src={logo} width="170" alt="BitShield"/>
       <Nav className="mr-auto ml-5" navbar>
           <Link to="/">HOME</Link>
