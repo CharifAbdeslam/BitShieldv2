@@ -71,6 +71,26 @@ class Exchange extends React.Component {
                   symbols="DSH/BTC"
                   ticker={this.props.tickerDsh}
                   icon = "cc DASH"/>}/>
+          <Route exact path="/exchange/neobtc" component={(props)=>
+                  <LeftWrapperExchange
+                  symbols="NEO/BTC"
+                  ticker={this.props.tickerNeo}
+                  icon = "cc NEO"/>}/>
+          <Route exact path="/exchange/zecbtc" component={(props)=>
+                  <LeftWrapperExchange
+                  symbols="ZEC/BTC"
+                  ticker={this.props.tickerZec}
+                  icon = "cc ZEC"/>}/>
+          <Route exact path="/exchange/eosbtc" component={(props)=>
+                  <LeftWrapperExchange
+                  symbols="EOS/BTC"
+                  ticker={this.props.tickerEos}
+                  icon = "cc EOS"/>}/>
+          <Route exact path="/exchange/omgbtc" component={(props)=>
+                  <LeftWrapperExchange
+                  symbols="OMG/BTC"
+                  ticker={this.props.tickerOmg}
+                  icon = "cc OMG"/>}/>
           </Switch>
      </Row>
     </Container>
@@ -87,6 +107,10 @@ const mapStateToProps = state =>({
   tickerEtc:state.price.tickerEtc,
   tickerIot:state.price.tickerIot,
   tickerDsh:state.price.tickerXmr,
+  tickerNeo:state.price.tickerNeo,
+  tickerZec:state.price.tickerZec,
+  tickerEos:state.price.tickerEos,
+  tickerOmg:state.price.tickerOmg,
   });
 export default connect(mapStateToProps,{_getTicker})(Exchange);
 Exchange.propTypes={
@@ -98,5 +122,9 @@ Exchange.propTypes={
   tickerEtc:PropTypes.array.isRequired,
   tickerIot:PropTypes.array.isRequired,
   tickerDsh:PropTypes.array.isRequired,
+  tickerNeo:PropTypes.array.isRequired,
+  tickerZec:PropTypes.array.isRequired,
+  tickerEos:PropTypes.array.isRequired,
+  tickerOmg:PropTypes.array.isRequired,
   _getTicker:PropTypes.func.isRequired
 };

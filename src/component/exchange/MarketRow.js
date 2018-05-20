@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import loaderSm from '../../img/loader-sm.svg';
-import {Link} from 'react-router-dom';
 
 class MarketRow extends React.Component{
-
   render(){
   const {ticker,symbol} = this.props;
   let vol = <img src={loaderSm} alt="0000" className="ml-3 mr-3 mb-1"/>;
@@ -19,7 +17,7 @@ class MarketRow extends React.Component{
     }
 
   return(<tr>
-      <td>{symbol}</td>
+      <td style={{fontWeight:'700'}}>{symbol}</td>
       <td>{avg}</td>
       <td>{vol}</td>
       <td>{check > 0 ?
