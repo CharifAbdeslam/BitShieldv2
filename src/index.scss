@@ -9,13 +9,38 @@ $gerIntense: #090909;
 $red:#7B1A1F;
 $green:#78C653;
 $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
+
 .text-danger{
   color:$red !important;
+}
+.hide{
+  display: none;
 }
 .text-success{
   color:$green !important;
 }
-
+.table-ticker{
+  span{
+    font-size: 12px;
+  }
+  table{
+    text-align: center;
+    th {
+      padding: 4px 0;
+      border-top: none;
+      color:$white;
+      font-weight: normal;
+      font-size: 12px;
+      border-bottom: 1px solid $white;
+    }
+    td{
+      padding: 4px 0;
+      border-top: none;
+      color:$white;
+      font-size: 12px;
+    }
+  }
+}
 .white-text{
   color:$white;
 }

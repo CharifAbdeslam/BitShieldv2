@@ -2,8 +2,29 @@
 .text-danger {
   color: #7B1A1F !important; }
 
+.hide {
+  display: none; }
+
 .text-success {
   color: #78C653 !important; }
+
+.table-ticker span {
+  font-size: 12px; }
+
+.table-ticker table {
+  text-align: center; }
+  .table-ticker table th {
+    padding: 4px 0;
+    border-top: none;
+    color: #D2D3D3;
+    font-weight: normal;
+    font-size: 12px;
+    border-bottom: 1px solid #D2D3D3; }
+  .table-ticker table td {
+    padding: 4px 0;
+    border-top: none;
+    color: #D2D3D3;
+    font-size: 12px; }
 
 .white-text {
   color: #D2D3D3; }

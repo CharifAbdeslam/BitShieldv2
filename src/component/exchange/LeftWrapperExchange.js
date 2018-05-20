@@ -24,7 +24,7 @@ class LeftWrapperExchange extends React.Component{
     let daylichange = "0.00";
     let daylichangePre = "0.00";
     let check = 0;
-    if(ticker[1] !== undefined) {
+    if(ticker.length > 0 && ticker !== undefined) {
         vol = (ticker[1][7] / 1000).toFixed(3);
         low = ticker[1][9].toFixed(6);
         hight = ticker[1][8].toFixed(6);
