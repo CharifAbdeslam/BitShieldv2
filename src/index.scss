@@ -19,6 +19,9 @@ $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
 .text-success{
   color:$green !important;
 }
+.nav-exchange-link{
+  line-height: 1.9 !important;
+}
 .table-ticker{
   span{
     font-size: 12px;
@@ -51,9 +54,6 @@ $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
 .exchange-field{
   background-color: #1B262D;
   border-radius: 5px;
-  &:hover{
-    transform: scale(1.01);
-  }
 }
 .exchange-price-wrapper{
   min-width: 320px;

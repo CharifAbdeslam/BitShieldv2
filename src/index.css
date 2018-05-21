@@ -8,6 +8,9 @@
 .text-success {
   color: #78C653 !important; }
 
+.nav-exchange-link {
+  line-height: 1.9 !important; }
+
 .table-ticker span {
   font-size: 12px; }
 
@@ -36,8 +39,6 @@
 .exchange-field {
   background-color: #1B262D;
   border-radius: 5px; }
-  .exchange-field:hover {
-    transform: scale(1.01); }
 
 .exchange-price-wrapper {
   min-width: 320px; }

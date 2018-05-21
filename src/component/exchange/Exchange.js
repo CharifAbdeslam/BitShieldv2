@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container,Row} from 'reactstrap';
 import LeftWrapperExchange from './LeftWrapperExchange';
+import MenuExchange from './MenuExchange';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -23,6 +24,8 @@ class Exchange extends React.Component {
 
   render() {
     return (<Router>
+      <div>
+      <MenuExchange />
       <Container fluid>
         <Row>
           <Switch>
@@ -94,6 +97,7 @@ class Exchange extends React.Component {
           </Switch>
      </Row>
     </Container>
+  </div>
     </Router>
     )
   }
