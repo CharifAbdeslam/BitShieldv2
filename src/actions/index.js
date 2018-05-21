@@ -9,6 +9,10 @@ export const LIVE_TICKERXMR = "LIVE_TICKERXMR";
 export const LIVE_TICKERETC = "LIVE_TICKERETC";
 export const LIVE_TICKERIOT = "LIVE_TICKERIOT";
 export const LIVE_TICKERDSH = "LIVE_TICKERDSH";
+export const LIVE_TICKERNEO = "LIVE_TICKERNEO";
+export const LIVE_TICKERZEC = "LIVE_TICKERZEC";
+export const LIVE_TICKEREOS = "LIVE_TICKEREOS";
+export const LIVE_TICKEROMG = "LIVE_TICKEROMG";
 const socket = socketIOClient('http://localhost:3001');
 const URL = "https://api.bitfinex.com/v2/tickers?symbols=";
 const TICKERS="tETHBTC,tBCHBTC,tXRPBTC,tLTCBTC,tXMRBTC,tETCBTC,tIOTBTC,tDSHBTC,tNEOBTC,tZECBTC,tEOSBTC,tOMGBTC";
@@ -50,6 +54,18 @@ export const _getTicker =()=> dispatch =>{
        }
        if(tickerChannel.dsh.chanId === data[0]){
          dispatch({type:LIVE_TICKERDSH,payload:data})
+       }
+       if(tickerChannel.neo.chanId === data[0]){
+         dispatch({type:LIVE_TICKERNEO,payload:data})
+       }
+       if(tickerChannel.zec.chanId === data[0]){
+         dispatch({type:LIVE_TICKERZEC,payload:data})
+       }
+       if(tickerChannel.eos.chanId === data[0]){
+         dispatch({type:LIVE_TICKEREOS,payload:data})
+       }
+       if(tickerChannel.omg.chanId === data[0]){
+         dispatch({type:LIVE_TICKEROMG,payload:data})
        }
   })
 

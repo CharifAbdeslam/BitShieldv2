@@ -6,7 +6,11 @@ import {LIVE_PRICE,
         LIVE_TICKERXMR,
         LIVE_TICKERETC,
         LIVE_TICKERIOT,
-        LIVE_TICKERDSH} from '../actions/index';
+        LIVE_TICKERDSH,
+        LIVE_TICKERNEO,
+        LIVE_TICKERZEC,
+        LIVE_TICKEREOS,
+        LIVE_TICKEROMG,} from '../actions/index';
 const INITIAL_STATE = {live:[],
                        tickerEth:[],
                        tickerBch:[],
@@ -15,7 +19,11 @@ const INITIAL_STATE = {live:[],
                        tickerXmr:[],
                        tickerEtc:[],
                        tickerIot:[],
-                       tickerDsh:[]
+                       tickerDsh:[],
+                       tickerNeo:[],
+                       tickerZec:[],
+                       tickerEos:[],
+                       tickerOmg:[]
                      }
 
 export default(state=INITIAL_STATE,action)=>{
@@ -38,6 +46,14 @@ export default(state=INITIAL_STATE,action)=>{
         return Object.assign({},state,{tickerIot:action.payload})
     case LIVE_TICKERDSH:
         return Object.assign({},state,{tickerDsh:action.payload})
+    case LIVE_TICKERNEO:
+        return Object.assign({},state,{tickerNeo:action.payload})
+    case LIVE_TICKERZEC:
+        return Object.assign({},state,{tickerZec:action.payload})
+    case LIVE_TICKEREOS:
+        return Object.assign({},state,{tickerEos:action.payload})
+    case LIVE_TICKEROMG:
+        return Object.assign({},state,{tickerOmg:action.payload})
     default:
        return state
   }

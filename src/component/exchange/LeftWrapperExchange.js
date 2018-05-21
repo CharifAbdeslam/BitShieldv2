@@ -63,7 +63,7 @@ class LeftWrapperExchange extends React.Component{
             </Col>
           </Row>
         </Col>
-        <TickerSymbols />
+        <TickerSymbols history={this.props.history} />
       </div>);
   }
 }

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import loaderSm from '../../img/loader-sm.svg';
 
 class MarketRow extends React.Component{
+
   render(){
-  const {ticker,symbol} = this.props;
+  const {ticker,symbol,history} = this.props;
   let vol = <img src={loaderSm} alt="0000" className="ml-3 mr-3 mb-1"/>;
   let avg = <img src={loaderSm} alt="0000" className="ml-3 mr-3 mb-1" />;
   let daylichangePre = "0.00";
@@ -16,7 +17,7 @@ class MarketRow extends React.Component{
       daylichangePre = (ticker[1][5] * 100).toFixed(2);
     }
 
-  return(<tr>
+  return(<tr onClick={() => history.push('/exchange/'+symbol)}>
       <td style={{fontWeight:'700'}}>{symbol}</td>
       <td>{avg}</td>
       <td>{vol}</td>
