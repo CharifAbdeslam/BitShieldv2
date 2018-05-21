@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Mina:400,700");
 .text-danger {
-  color: #FF0D19 !important; }
+  color: #F95A62 !important; }
 
 .hide {
   display: none; }
@@ -34,8 +34,10 @@
   background-color: #090909; }
 
 .exchange-field {
-  background-color: #1b262d;
-  border-radius: 3px; }
+  background-color: #1B262D;
+  border-radius: 5px; }
+  .exchange-field:hover {
+    transform: scale(1.01); }
 
 .exchange-price-wrapper {
   min-width: 320px; }

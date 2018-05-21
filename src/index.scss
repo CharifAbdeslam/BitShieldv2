@@ -6,7 +6,7 @@ $blue: #021521;
 $grey: #1B262D;
 $greyHard: #504f4f;
 $gerIntense: #090909;
-$red:#FF0D19;
+$red:#F95A62;
 $green:#78C653;
 $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
 
@@ -49,8 +49,11 @@ $guardian: linear-gradient(9deg, #000F18 50%, #0D3044 100%);
   background-color: $gerIntense;
 }
 .exchange-field{
-  background-color: rgba(27,38,45,1);
-  border-radius: 3px;
+  background-color: #1B262D;
+  border-radius: 5px;
+  &:hover{
+    transform: scale(1.01);
+  }
 }
 .exchange-price-wrapper{
   min-width: 320px;
