@@ -10,8 +10,11 @@ class TickerSymbols extends React.Component{
   render(){
   return(<div className="mt-2">
     <Col xs={2} className="exchange-price-wrapper exchange-field ml-2 pr-1 pl-1 table-ticker">
-      <span className="white-text ml-2">LIVE MARKET: <FontAwesomeIcon icon={faCircle}
-            style={{color: '#78C653'}}/> </span>
+      <span className="white-text ml-2"
+            style={{fontSize: '10px'}}>LIVE MARKET: <FontAwesomeIcon icon={faCircle}
+            style={{color: '#78C653'}}/>  <FontAwesomeIcon icon={faCircle}
+            style={{color: '#890202'}}/>
+          </span>
           <Table  responsive hover>
             <thead>
               <tr>
@@ -22,47 +25,23 @@ class TickerSymbols extends React.Component{
               </tr>
             </thead>
             <tbody>
-          <MarketRow  symbol="ETH:BTC"
-                      ticker={this.props.tickerEth}
-                      history={this.props.history}/>
-          <MarketRow  symbol="BCH:BTC"
-                      ticker={this.props.tickerBch}
-                      history={this.props.history}/>
-          <MarketRow  symbol="XRP:BTC"
-                      ticker={this.props.tickerXrp}
-                      history={this.props.history}/>
-          <MarketRow  symbol="LTC:BTC"
-                      ticker={this.props.tickerLtc}
-                      history={this.props.history}/>
-          <MarketRow  symbol="XMR:BTC"
-                      ticker={this.props.tickerXmr}
-                      history={this.props.history}/>
-          <MarketRow  symbol="ETC:BTC"
-                      ticker={this.props.tickerEtc}
-                      history={this.props.history}/>
-          <MarketRow  symbol="IOT:BTC"
-                      ticker={this.props.tickerIot}
-                      history={this.props.history}/>
-          <MarketRow  symbol="DSH:BTC"
-                      ticker={this.props.tickerDsh}
-                      history={this.props.history}/>
-          <MarketRow  symbol="NEO:BTC"
-                      ticker={this.props.tickerNeo}
-                      history={this.props.history}/>
-          <MarketRow  symbol="EOS:BTC"
-                      ticker={this.props.tickerEos}
-                      history={this.props.history}/>
-          <MarketRow  symbol="ZEC:BTC"
-                      ticker={this.props.tickerZec}
-                      history={this.props.history}/>
-          <MarketRow  symbol="OMG:BTC"
-                      ticker={this.props.tickerOmg}
-                      history={this.props.history}/>
+          <MarketRow  symbol="ETH/BTC" ticker={this.props.tickerEth}/>
+          <MarketRow  symbol="BCH/BTC" ticker={this.props.tickerBch}/>
+          <MarketRow  symbol="XRP/BTC" ticker={this.props.tickerXrp}/>
+          <MarketRow  symbol="LTC/BTC" ticker={this.props.tickerLtc}/>
+          <MarketRow  symbol="XMR/BTC" ticker={this.props.tickerXmr}/>
+          <MarketRow  symbol="ETC/BTC" ticker={this.props.tickerEtc}/>
+          <MarketRow  symbol="IOT/BTC" ticker={this.props.tickerIot}/>
+          <MarketRow  symbol="DSH/BTC" ticker={this.props.tickerDsh}/>
+          <MarketRow  symbol="NEO/BTC" ticker={this.props.tickerNeo}/>
+          <MarketRow  symbol="EOS/BTC" ticker={this.props.tickerEos}/>
+          <MarketRow  symbol="ZEC/BTC" ticker={this.props.tickerZec}/>
+          <MarketRow  symbol="OMG/BTC" ticker={this.props.tickerOmg}/>
         </tbody>
           </Table>
     </Col>
   </div>);
-}
+ }
 }
 const mapStateToProps=state=>({
   tickerEth:state.price.tickerEth,

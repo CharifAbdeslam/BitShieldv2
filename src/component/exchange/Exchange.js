@@ -26,81 +26,68 @@ class Exchange extends React.Component {
       <Container fluid>
         <Row>
           <Switch>
-            <Route exact path="/exchange" component={({history})=>
+            <Route exact path="/exchange" component={(props)=>
               <LeftWrapperExchange
-                history={history}
                 symbols="ETH/BTC"
                 ticker={this.props.tickerEth}
                 icon = "cc ETH"/>}/>
-            <Route exact path="/exchange/ETH:BTC" component={({history})=>
+            <Route exact path="/exchange/ETH:BTC" component={(props)=>
               <LeftWrapperExchange
-                history={this.props.history}
                 symbols="ETH/BTC"
                 ticker={this.props.tickerEth}
                 icon = "cc ETH"/>}/>
-           <Route exact path="/exchange/BCH:BTC" component={({history})=>
+           <Route exact path="/exchange/BCH:BTC" component={(props)=>
               <LeftWrapperExchange
-                history={this.props.history}
                 symbols="BCH/BTC"
                 ticker={this.props.tickerBch}
                 icon = "cc BCH"/>}/>
-          <Route exact path="/exchange/XRP:BTC" component={({history})=>
+          <Route exact path="/exchange/XRP:BTC" component={(props)=>
               <LeftWrapperExchange
-                history={this.props.history}
                 symbols="XRP/BTC"
                 ticker={this.props.tickerXrp}
                 icon = "cc XRP"/>}/>
-          <Route exact path="/exchange/LTC:BTC" component={({history})=>
+          <Route exact path="/exchange/LTC:BTC" component={(props)=>
               <LeftWrapperExchange
-                history={this.props.history}
                 symbols="LTC/BTC"
                 ticker={this.props.tickerLtc}
                 icon = "cc LTC"/>}/>
-          <Route exact path="/exchange/XMR:BTC" component={({history})=>
+          <Route exact path="/exchange/XMR:BTC" component={(props)=>
               <LeftWrapperExchange
-                history={this.props.history}
                 symbols="XMR/BTC"
                 ticker={this.props.tickerXmr}
                 icon = "cc XMR"/>}/>
-          <Route exact path="/exchange/ETC:BTC" component={({history})=>
+          <Route exact path="/exchange/ETC:BTC" component={(props)=>
               <LeftWrapperExchange
-                history={this.props.history}
                 symbols="ETC/BTC"
                 ticker={this.props.tickerEtc}
                 icon = "cc ETC"/>}/>
-          <Route exact path="/exchange/IOT:BTC" component={({history})=>
+          <Route exact path="/exchange/IOT:BTC" component={(props)=>
                 <LeftWrapperExchange
-                history={this.props.history}
                 symbols="IOT/BTC"
                 ticker={this.props.tickerIot}
                 icon = "cc IOTA"/>}/>
-          <Route exact path="/exchange/DSH:BTC" component={({history})=>
+          <Route exact path="/exchange/DSH:BTC" component={(props)=>
                 <LeftWrapperExchange
-                  history={this.props.history}
                   symbols="DSH/BTC"
                   ticker={this.props.tickerDsh}
                   icon = "cc DASH"/>}/>
-          <Route exact path="/exchange/NEO:BTC" component={({history})=>
+          <Route exact path="/exchange/NEO:BTC" component={(props)=>
                   <LeftWrapperExchange
-                  history={this.props.history}
                   symbols="NEO/BTC"
                   ticker={this.props.tickerNeo}
                   icon = "cc NEO"/>}/>
-          <Route exact path="/exchange/ZEC:BTC" component={({history})=>
+          <Route exact path="/exchange/ZEC:BTC" component={(props)=>
                   <LeftWrapperExchange
-                  history={this.props.history}
                   symbols="ZEC/BTC"
                   ticker={this.props.tickerZec}
                   icon = "cc ZEC"/>}/>
-          <Route exact path="/exchange/EOS:BTC" component={({history})=>
+          <Route exact path="/exchange/EOS:BTC" component={(props)=>
                   <LeftWrapperExchange
-                  history={this.props.history}
                   symbols="EOS/BTC"
                   ticker={this.props.tickerEos}
                   icon = "cc EOS"/>}/>
-          <Route exact path="/exchange/OMG:BTC" component={({history})=>
+          <Route exact path="/exchange/OMG:BTC" component={(props)=>
                   <LeftWrapperExchange
-                  history={this.props.history}
                   symbols="OMG/BTC"
                   ticker={this.props.tickerOmg}
                   icon = "cc OMG"/>}/>

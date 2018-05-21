@@ -30,41 +30,40 @@ socket.on("channelID",function(data){
 })
 export const _getTicker =()=> dispatch =>{
   socket.on("ticker",function(data){
-    console.log(tickerChannel)
-       if(tickerChannel.eth.chanId === data[0]){
+       if(tickerChannel.eth.chanId === data[0] && tickerChannel.eth.channel === "ticker"){
         dispatch({type:LIVE_TICKERETH,payload:data})
        }
-       if(tickerChannel.bch.chanId === data[0]){
+       if(tickerChannel.bch.chanId === data[0] && tickerChannel.bch.channel === "ticker"){
          dispatch({type:LIVE_TICKERBCH,payload:data})
        }
-       if(tickerChannel.xrp.chanId === data[0]){
+       if(tickerChannel.xrp.chanId === data[0] && tickerChannel.xrp.channel === "ticker"){
          dispatch({type:LIVE_TICKERXRP,payload:data})
        }
-       if(tickerChannel.ltc.chanId === data[0]){
+       if(tickerChannel.ltc.chanId === data[0] && tickerChannel.ltc.channel === "ticker"){
          dispatch({type:LIVE_TICKERLTC,payload:data})
        }
-       if(tickerChannel.xmr.chanId === data[0]){
+       if(tickerChannel.xmr.chanId === data[0] && tickerChannel.xmr.channel === "ticker"){
          dispatch({type:LIVE_TICKERXMR,payload:data})
        }
-       if(tickerChannel.etc.chanId === data[0]){
+       if(tickerChannel.etc.chanId === data[0] && tickerChannel.etc.channel === "ticker"){
          dispatch({type:LIVE_TICKERETC,payload:data})
        }
-       if(tickerChannel.iot.chanId === data[0]){
+       if(tickerChannel.iot.chanId === data[0] && tickerChannel.iot.channel === "ticker"){
          dispatch({type:LIVE_TICKERIOT,payload:data})
        }
-       if(tickerChannel.dsh.chanId === data[0]){
+       if(tickerChannel.dsh.chanId === data[0] && tickerChannel.dsh.channel === "ticker"){
          dispatch({type:LIVE_TICKERDSH,payload:data})
        }
-       if(tickerChannel.neo.chanId === data[0]){
+       if(tickerChannel.neo.chanId === data[0] && tickerChannel.neo.channel === "ticker"){
          dispatch({type:LIVE_TICKERNEO,payload:data})
        }
-       if(tickerChannel.zec.chanId === data[0]){
+       if(tickerChannel.zec.chanId === data[0] && tickerChannel.zec.channel === "ticker"){
          dispatch({type:LIVE_TICKERZEC,payload:data})
        }
-       if(tickerChannel.eos.chanId === data[0]){
+       if(tickerChannel.eos.chanId === data[0] && tickerChannel.eos.channel === "ticker"){
          dispatch({type:LIVE_TICKEREOS,payload:data})
        }
-       if(tickerChannel.omg.chanId === data[0]){
+       if(tickerChannel.omg.chanId === data[0] && tickerChannel.omg.channel === "ticker"){
          dispatch({type:LIVE_TICKEROMG,payload:data})
        }
   })
